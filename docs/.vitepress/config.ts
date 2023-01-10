@@ -1,6 +1,7 @@
 export default {
   title: 'MrCat',
   description: 'webSite Blog',
+  base: '/blog',
   themeConfig: {
     nav: [
       { text: "Guide", link: "/guide/" },
