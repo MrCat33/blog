@@ -4,6 +4,9 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  schedule:
+    # Runs everyday at 8:00 AM
+    - cron: "0 8 * * *"
 jobs:
   Build:
     # The type of runner that the job will run on
@@ -23,5 +26,5 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.DEVELOP_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
