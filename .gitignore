@@ -1,0 +1,5 @@
+node_modules
+.pnpm-debug.log
+_metadata.json
+vue.js
+vue.js.map
